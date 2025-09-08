@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- 준비한 이미지는 166px 166px 의 이미지임 -->
+
+<!-- background-color -->
+<div style="background-color: aqua; width: 300px; height: 300px;"></div>
+
+<br/>
+<br/>
+<br/>
+<!-- background-image -->
+<div style="background-image: url('images/img.png'); width: 300px; height: 300px;"></div>
+
+<br/>
+<br/>
+<br/>
+<!-- background-repeat
+     no-repeat : 반복되지 않도록 함
+ -->
+<div style="background-image: url('images/img.png'); background-repeat: no-repeat; width: 300px; height: 300px;"></div>
+<br/>
+<br/>
+<br/>
+<!-- repeat-x -->
+<div style="background-image: url('images/img.png'); background-repeat: repeat-x; width: 300px; height: 300px;"></div>
+<!-- repeat-y -->
+<div style="background-image: url('images/img.png'); background-repeat: repeat-y; width: 300px; height: 300px;"></div>
+
+
+<!-- background-size -->
+<!-- 사이즈로 고정하기 -->
+<div style="background-image: url('images/img.png'); background-size: 100px 100px; background-repeat: repeat; width: 300px; height: 300px;"></div>
+
+<!-- 영역에 맞춰서 -->
+<div style="background-image: url('images/img.png'); background-size: contain; background-repeat: repeat; width: 300px; height: 300px;"></div>
+<!-- contain : 요소 안에 크기를 맞추나, 비율을 유지하면서 이미지가 다 나올 수 있게 하기 때문에 빈 공간이 생길 수 있음 -->
+<!-- cover : 요소 안에 크기를 맞추는데, 비율을 유지하면서 영역에 꽉 차게 만들기 때문에 이미지가 잘릴 수 있음 -->
+
+<!-- background-position -->
+<div style="background-image: url('images/img.png'); background-position: 100px 100px; background-repeat: no-repeat; background-size: 100px 100px; width: 300px; height: 300px;"></div>
+<!-- 좌측 상단의 이미지 시작지점을 기준으로 position을 잡으면 됨 -->
+
+
+</body>
+</html>

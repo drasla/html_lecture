@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- text-align -->
+<div style="width: 300px; border: 1px solid black; text-align: left;">이건 왼쪽 정렬을 합니다.</div>
+<div style="width: 300px; border: 1px solid black; text-align: center;">이건 가운데 정렬을 합니다.</div>
+<div style="width: 300px; border: 1px solid black; text-align: right;">이건 오른쪽 정렬을 합니다.</div>
+
+<!-- line-height -->
+<div style="width: 300px;">
+    <span style="line-height: 1.5;">이건 줄 간격을 나타내는 스타일입니다.</span><br/>
+    <span style="line-height: 2;">2를 작성해보겠습니다.</span><br/>
+    <span style="line-height: 50px;">세 줄을 작성해보겠습니다.</span><br/>
+    마지막 줄은 윗 줄이 얼마나 떨어져있는지 보기 위해섭니다.
+</div>
+<!-- 흔히 줄 간격은 밑으로라고 생각하기 쉽지만, 글자의 중심선을 기준으로 위아래로 늘어남 -->
+<!-- 마찬가지로 상대값인 숫자만 사용하면 상대크기로 적용되기 때문에 반응형 디자인에 유리함 -->
+
+<!-- text-indent -->
+<div style="width: 300px; border: 1px solid black;">
+    <span>이건 기준접이 되는 문장입니다.</span><br />
+    <span style="text-indent: 20px;">이건 인덴트가 적용되는 문장입니다.</span>
+</div>
+<!-- 왜 안될까? text-indent는 block요소에만 적용되기 때문임. span은 불가 -->
+<div style="width: 300px; border: 1px solid black;">
+    <p>기준 줄입니다</p>
+    <p style="text-indent: 20px;">들여쓰기가 적용되었습니다.</p> <!-- li가 이걸 통해서 들여쓰기가 적용되는 중 -->
+</div>
+
+<!-- text-overflow -->
+<!-- 영역을 넘어서면 보이지 않게끔 처리할 때 많이 사용됨.
+     white-space, overflow와 동시에 적용하는 경우가 많음.
+-->
+<div style="width: 200px; background-color: yellow; white-space: nowrap; overflow: hidden;">
+    영역이 고정되어 있는 상태에서 text-overflow를 쓰면 어떻게 될까요
+</div>
+<div style="width: 200px; background-color: aqua; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+    영역이 고정되어 있는 상태에서 text-overflow를 쓰면 어떻게 될까요
+</div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 제목에 대한 예제 -->
+<h1>이것은 h1 태그입니다</h1>
+<h2>이것은 h2 태그입니다</h2>
+<h3>이것은 h3 태그입니다</h3>
+<h4>이것은 h4 태그입니다</h4>
+<h5>이것은 h5 태그입니다</h5>
+<h6>이것은 h6 태그입니다</h6>
+
+<!-- br에 대한 설명 -->
+이것은 일반 글자입니다.<br/>
+이것은 두번째 줄에 나와야 합니다.
+
+<!-- hr에 대한 설명 -->
+<hr/>
+절취선을 넣어봤습니다.
+
+<!-- strong과 mark에 대한 설명 -->
+<strong>굵게 표시를 합니다</strong>
+<mark>형관펜 효과를 넣습니다</mark>
+
+<!-- ul에 대한 설명. 목록을 표기할 떄 사용 -->
+<ul>
+    <li>목록을 만듭니다</li>
+    <li>목록을 만듭니다</li>
+    <li>목록을 만듭니다</li>
+</ul>
+
+<!-- li만 쓰면 의미 없음 -->
+<li>li만 쓰면?</li>
+<li>li만 쓰면?</li>
+
+<!-- ol에 대한 설명. 순서가 있는 목록을 표기할 때 사용 -->
+<ol type="A" start="10">
+    <li>ol을 사용하는 겁니다</li>
+    <li>ol을 사용하는 겁니다</li>
+</ol>
+
+<!-- table에 대한 설명. 보기 편하게 border 속성 사용 -->
+<table border="1">
+    <thead>
+    <tr>
+        <th>제목행,열1</th>
+        <th>제목행,열2</th>
+        <th>제목행,열3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>행2,열1</td>
+        <td>행2,열2</td>
+        <td>행2,열3</td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- colspan에 대한 설명. 열 병합 -->
+<table border="1">
+    <tbody>
+    <tr>
+        <td colspan="3">
+            열 병합
+        </td>
+    </tr>
+    <tr>
+        <td>행2,열1</td>
+        <td>행2,열2</td>
+        <td>행2,열3</td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- rowspan에 대한 설명. 행 병합 -->
+<table border="1">
+    <tbody>
+    <tr>
+        <td rowspan="3">행 병합</td>
+        <td>행1,열2</td>
+        <td>행1,열3</td>
+    </tr>
+    <tr>
+        <td>행2,열2</td>
+        <td>행2,열3</td>
+    </tr>
+    <tr>
+        <td>행3,열2</td>
+        <td>행3,열3</td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- 영역 관련 태그. div 초 중요 -->
+<div style="width: 200px; height: 200px; background-color: red;">
+    이것은 가로 200px, 세로 200px의 영역(block)을 갖는 div입니다.
+</div>
+<div style="width: 400px; height: 200px; background-color: blue; color: white;">
+    이것은 가로 400px, 세로 200px의 영역(block)을 갖는 div입니다.
+</div>
+
+<!-- 영역 관련 태그. p -->
+<p>이것은 block 형식을 갖는 p 태그 입니다.</p>
+<p>이것은 두 번째 p 태그 입니다.</p>
+<p style="width: 200px; height: 500px; background-color: green;">이것은 세 번째 p 태그 입니다.</p>
+
+<!-- div와 p의 차이. div는 영역을 잡는 태그이기 떄문에 내부에 또 다른 요소가 들어갈 수 있음 -->
+<!-- p는 동일한 block 요소이긴 하지만 Paragraph(문장)의 태그이기 떄문에 문자 외의 요소가 들어갈 수 없음 -->
+
+<span>이것은 inline 형식을 갖는 span 태그 입니다.</span>
+<span style="width: 300px; height: 200px; background-color: yellow;">span태그입니다.</span>
+
+
+<!-- 이미지 태그. 집어넣으면 왜 span 옆에 들어가게 될까? 를 확인. 크기가 크니 style로 나중에 제한 -->
+<img src="images/bot.jpg" style="width: 100px;"/>
+
+<div><img src="images/bot.jpg" style="width: 100px;" alt="로봇사진"/></div>
+<div>div로 영역을 잡으면 한 줄에 들어가지 않습니다.</div>
+
+<!-- a 태그 -->
+<a href="https://www.naver.com" target="_blank">NAVER로 가기 (새 창)</a>
+<a href="https://www.naver.com" target="_self">NAVER로 가기 (현재 창)</a>
+
+<form action=“타겟주소” method=“get”>
+    <fieldset name=“이름”>
+        <legend>명칭작성</legend>
+        <input/>
+    </fieldset>
+</form>
+
+<!-- input 태그 생성 -->
+<input type="text"/><br/>   <!-- 텍스트를 받는 방식. 기본값임 -->
+<input type="password"/><br/> <!-- 비밀번호를 받는 방식 -->
+<input type="checkbox"/><br/> <!-- 체크박스로 변환. value가 있으면 value값이 전달되며, value가 없으면 on 이 전달됨  -->
+<input type="radio"/><br/> <!-- 라디오 버튼으로 변환. value가 있으면 value값이 전달되며, value가 없으면 on 이 전달됨 -->
+<input type="file"/><br/>
+<input type="button"/><br/>
+<!-- input type hidden -->
+<input type="hidden"/><!-- 사용자에게는 아무것도 보이지 않지만, 개발자도구에서 확인 하면 태그는 살아있음 -->
+<!-- input이 어떠한 값을 지정하려는지 표기가 필요하기 때문에 name 속성이 필요함 -->
+<!-- radio의 경우, name이 동일한 것들끼리 묶임 -->
+<input type="radio" name="gender" value="남"/>
+<input type="radio" name="gender" value="여"/>
+
+
+<!-- HTML5 input 태그의 type들 -->
+<input type="tel"/><br/>
+<input type="number"/><br/> <!-- 숫자만 입력 가능하며, 위 아래 화살표로 숫자를 변경 가능 -->
+<input type="email"/><br/>
+<input type="date"/><br/>
+<input type="time"/><br/>
+<input type="datetime-local"/><br/>
+<input type="month"/><br/>
+<input type="week"/><br/>
+<input type="color"/><br/> <!-- 클릭하면 colorPicker가 출력됨 -->
+<input type="range"/><br/>
+<input type="search"/><br/> <!-- 빈값이 아니면, 우측에 입력된 내용을 삭제할 수 있는 X 아이콘이 표기됨 -->
+<input type="url"/><br/> <!-- 주소에 http:// 나 https:// 가 있는 것을 체크함 -->
+
+
+<!-- label 기본 -->
+<label>
+    사용자명 <input type="text" name="username"/>
+</label>
+<!-- label for를 통해 외부에 있는 input에 대해 설명해줄 수 있음. for 내에는 name이 아닌, id가 들어가야 함 -->
+<label for="pwd">비밀번호</label><input type="password" name="pwd" id="pwd"/><br/>
+
+<!-- select 태그 -->
+<label>
+    전화번호국번
+    <select>
+        <option value="010" selected>010</option>
+        <option value="011">011</option>
+        <option value="016">016</option>
+        <option value="017">017</option>
+        <option value="018">018</option>
+        <option value="019">019</option>
+    </select>
+</label><br/>
+
+<!-- button의 사용처 -->
+<button style="background-color: black; border-radius: 10px; padding: 10px; color: white;">Login</button>
+<!-- 이후, a 태그 추가 -->
+<!-- 이동하는 버튼이나, 글 삭제 버튼 등 어떠한 기능이 동작하는 영역이라는 표식으로 많이 사용함 -->
+<!-- 원래의 button의 존재 의의가 form 내부에서 작성된 input들의 값을 전달하는 역할을 하고 있기 때문 -->
+
+<form name="signIn" action="데이터를보낼주소">
+    <label>
+        사용자명 <input type="text" name="username"/>
+    </label><br/>
+    <label>
+        비밀번호 <input type="password" name="password"/>
+    </label><br/>
+    <button type="submit">로그인</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<header style="margin-top: 100px; /* position: relative; height: 5000px; */">
+    <div style="background-color: red;">1</div>
+    <div style="background-color: green; /* position: absolute; top: 0; */">2</div>
+    <div style="background-color: yellow;">3</div>
+</header>
+
+<!-- 1. 단순하게 absolute만 붙이면 출력은 되지만, 위치에 없는 취급을 하여 다른 요소들이 배치됨 -->
+<!-- 2. absolute에 위치값을 붙이면, 기준점이 되는 요소에 맞추어 배치됨
+     top: 0 을 붙여봄. -> body에 붙는데 이것은 기준점이 되는 relative가 없기 때문에 최상단 부모인 body에 붙었음을 의미
+     header에 relative를 붙여봄.
+     3. top 뿐만 아니라 bottom도 가능하며, left와 right도 가능함. 마이너스 값도 가능함
+     4. 배치가 되지만 어쨌든 전체 레이아웃에서는 없는 취급임.
+     5. absolute는 위치가 불변하며, 특정 요소에 대해 기준점을 잡고 배치를 할 때 유용함.
+        네이버 메인 페이지의 우측 상단에 있는 알람 예시
+        또한 어떠한 요소에 걸쳐져 있는 것 역시 absolute를 사용해서 배치 가능함 안내. (메일 위에 떠 있는 알람) -> 레이아웃의 규격 외의 위치에 배치할 때
+     6. absolute가 아닌 fixed로 변경
+     7. fixed는 body에 대해 동작하는 것 같지만, Viewport를 기준으로 동작함.
+        Viewport란 현재 보여지고 있는 화면 영역 -> 스크롤을 내려도 해당 위치에 고정임
+        -> header의 height를 5000px로 변경
+-->
+
+
+
+<!-- visibility: hidden -> div 1번에 속성 부여 -->
+<!-- display: none 으로 바꿔봄 -->
+
+
+<!-- absolute만 주었을 때 2와 3 div가 겹쳤을 때 위로 무엇이 올라갈지 결정하는 속성 z-index
+     또한, fixed 처럼 존재할 때에도 가장 위에 무엇이 올라가야 되는지 결정해주기 위해 속성을 지정해줌
+     예시) 펼침메뉴가 있고, 팝업되는 모달창이 있고, 따라다니는 헤더가 있을 때의 어떤 것이 우선으로 화면에 떠 있어야 되는지 결정
+          모달창 -> 50
+          따라다니는 헤더 -> 10
+          펼침메뉴 -> 30 등, 이건 개발자의 의도에 따라 설정하면 됨
+      마이너스 값도 사용할 수 있고, 최대 9999 까지 안에서 지정하면 됨 -->
+
+</body>
+</html>

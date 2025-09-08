@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- 기준 형태를 잡고 시작 -->
+<!-- width, height -->
+<!--
+     1. HTML 코드 작성. 버튼 빼고!!
+     2. padding, margin-top, box-sizing을 제외한 나머지 CSS 코드 작성
+     2. 개발자 도구에서 요소의 사이즈를 보는 영역에 대한 소개
+     3. padding과 margin만 추가하여 설명
+     4. box-sizing을 추가해서 설명
+ -->
+<div style="width: 100vw; height: 100dvh; display: flex; justify-content: center; align-items: center;">
+    <div style="width: 300px; height: 300px; border-radius: 20px; border: 1px solid gray; background-color: #f5f5f5;">
+        <div style="width: 100%">
+            <div style="width: 100%; font-size: 30px; font-weight: 600; text-align: center;">로그인 화면</div>
+            <div>
+                <label>
+                    <span>사용자명</span>
+                    <input type="text"
+                           style="width: 100%; /* padding: 10px; margin-top: 5px; box-sizing: border-box; */"/>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>비밀번호</span>
+                    <input type="password"
+                           style="width: 100%; /* padding: 10px; margin-top: 5px; box-sizing: border-bix */"/>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+    margin과 padding은 상하 좌우 순으로 쓸 수 있으며,
+    위쪽 오른쪽 아래쪽 왼쪽 순서로도 쓸 수 있음. 시계방향.
+    3개만도 쓸 수 있음. 1px 2px 3px 으로 쓰면 마지막 오른쪽은 2px로 먹히지만 이렇게는 잘 쓰지 않음.
+    width, height, margin, padding은 이해하기 쉬움. 하지만 전체 길이는 생각과 다름.
+
+    margin이 상단에 5px, border가 상하좌우 2px씩, padding이 상하좌우 10px씩 있음
+    input은 width를 100%로 했기 때문에, 내부 영역이 부모의 100%인 400px로 되었기 때문에 총 width는 2+10+400+10+2 가 되었기 때문에
+    영역을 벗어남
+
+    이 때 필요한게 box-sizing으로 box-sizing: border-box를 주게되면 그 총합이 100%에 맞춰서 자동 계산됨
+-->
+
+<!-- border 에 대한 설명 진행. 버튼을 추가할 것임 -->
+<button style="text-align: center; width: 100px; background-color: lightblue; color: black;">로그인</button>
+<!--
+     border-style: solid;
+     border-style: dashed;
+     border-style: dotted;
+-->
+<!--
+    border-width: 1px;
+    border-width: 2px;
+    border-width: 3px;
+-->
+<!--
+    border-color: black;
+    border-color: red;
+    border-color: blue;
+-->
+<!-- border: 1px solid black; -->
+<!-- border-radius: 10px; -->
+
+
+<!-- box-shadow 는 마찬가지로 제네레이터 사이트 소개 -->
+</body>
+</html>

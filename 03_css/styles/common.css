@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Simple';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* rem 설명할 때 추가 */
+html {
+    font-size: 14px;
+}
+
+/* 폰트 패밀리 할 때 추가
+   폰트는 본인의 컴퓨터에 존재하는 폰트는 문제없이 출력됨 */
+
+html {
+    font-family: 'Malgun Gothic', serif;
+    /* serif는 글자의 획에 작은 삐침이 있는 글꼴 계열의 통칭인데 CSS에서는 브라우저가 사용할 수 있는 세리프 계열 글꼴을 자동 선택함 */
+    /* 윈도우 계열 OS에서는 맑은고딕 폰트가 설치되어 있기 때문에 출력되지만, 모바일 등의 디바이스에서는 출력되지 않아 serif가 선택됨 */
+    /* 따라서 출시된 것이 웹폰트. 폰트 파일을 웹에 올려두고 그걸 이미지 불러오듯 불러와서 사용할 수 있도록 함 */
+    /* 대표적인 사이트로는 구글 폰트와 국내 사이트로는 눈누가 존재함 */
+}
+
+p {
+    color: red;
+}
+
+#unique {
+    color: blue;
+}
+
+.class-selector {
+    font-family: 'Simple', serif;
+    font-size: 35px;
+}
