@@ -1,0 +1,147 @@
+.detail-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.detail-left {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.detail-left > img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.detail-left .detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-subTitle-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.detail-review-container {
+    display: flex;
+    gap: 15px;
+}
+
+.detail-review-item {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.detail-review-writer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-review-star {
+    color: var(--main-color);
+}
+
+.detail-review-content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.detail-review-more {
+    font-size: 0.9rem;
+    text-align: right;
+    text-decoration: underline;
+    color: #888;
+    cursor: pointer;
+}
+
+.detail-hostInfo {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+.detail-left .detail-description {
+    white-space: pre-wrap;
+}
+
+.detail-qna-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+}
+
+.detail-qna-q {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.detail-qna-a {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.detail-right {
+    width: 35%;
+}
+
+.detail-right-box {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-right-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.detail-right-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.detail-right-button {
+    border-radius: 16px;
+    padding: 10px 20px;
+    border: none;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+

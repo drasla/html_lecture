@@ -1,0 +1,26 @@
+.category-list {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-list > a {
+    padding: 15px 0;
+    color: #ccc;
+}
+
+.category-list > a:hover {
+    color: black;
+}
+
+.category-list > a.active {
+    color: black;
+}
+
+.right-container > .subTitle {
+    margin-bottom: 30px;
+}

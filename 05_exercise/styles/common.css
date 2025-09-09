@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'RiaSans-ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --dark-color: #D08906;
+    --main-color: #FFA600;
+    --light-color: #FFCD62;
+    --border-color: #CCCCCC;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sr-only {
+    /* 시각장애인용 스크린 리더 기능을 동작시키기 위한 클래스.
+       display: none; 으로는 화면에 보여지지 않아 스크린 리더 기능이 동작 불가능하므로,
+       최소한으로 만들어서 실제적으로는 화면에 보이지 않게끔 하지만, 존재는 하도록 함
+    */
+    position: absolute;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 왜 header를 100%로 하고 header-container를 안에 배치를 하였는가 */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    /* 배경색을 그라데이션을 줄 수 있음 */
+    background-image: linear-gradient(to right, #FFA600, #FFCD62);
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-family: 'RiaSans-ExtraBold', serif;
+    color: #fff;
+    /* 왜 font-weight: bold를 주지 않아도 될까 */
+    user-select: none; /* 드래그가 안되도록 */
+    cursor: pointer;
+}
+
+.header-buttonBox {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.header-button {
+    min-width: 40px;
+    padding: 8px 16px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-button i {
+    font-size: 1.5rem;
+}
+
+.header-button span {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+main {
+    width: 100%;
+}
+
+.main-banner-container {
+    width: 100%;
+}
+
+.main-banner-container img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover; /* 크기에 맞춰서 이미지를 맞춤 */
+}
+
+.subTitle-container {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.subTitle {
+    position: relative; /* 이후 after 가상요소의 absolute를 위한 포지션 설정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+/*
+   before와 after를 통해 해당 요소의 앞 뒤 요소를 생성할 수 있음
+   다만, 내용이 없으면 출력되지 않으므로 content 속성을 사용해서 빈값을 넣어줌
+ */
+.subTitle:after {
+    content: ""; /* before와 after 가상 요소에만 사용 가능. 태그는 넣을 수 없음 */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #FFA600, #FFCD62);
+    height: 3px;
+    width: 100%;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.main-category-container {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.main-category-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-category-item-bg {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.main-category-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.main-moim-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* 처음엔 gap: 20px 로 설정. 리스트 추가 후 column-gap으로 바꾸고, row-gap 추가 */
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.main-moim-container > .moim-list-item {
+    /* 먼저 33.3%로 설명. 이후 리스트를 추가한 후 calc로 변경 */
+    width: calc((100% - 40px) / 3);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-moim-container > .moim-list-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.main-moim-container > .moim-list-item-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    /* 말줄임. 원하는 줄 수 이상은 출력되지 않도록 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.main-moim-container > .moim-list-item > .moim-list-item-date {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #A0A0A0;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-family: 'RiaSans-ExtraBold', serif;
+    user-select: none;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    opacity: 1;
+    pointer-events: none;
+}
+
+.menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.menu-container {
+    width: 320px;
+    max-width: 80vw;
+    height: 100%;
+    background-color: rgb(247, 248, 251);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    pointer-events: all;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.menu-logo {
+    font-size: 1.2rem;
+    user-select: none;
+    cursor: pointer;
+    font-family: 'RiaSans-ExtraBold', serif;
+}
+
+.menu-closeButton {
+    font-size: 1.8rem;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.menu-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.menu-title {
+    font-size: 1.1rem; /* 이게 왜 가능? Cascading이기 때문. 순서가 중요함 */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-content .menu-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-content .menu-list > a {
+    width: calc(50% - 10px);
+    padding: 10px 15px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.menu-content .menu-list > a > img {
+    width: 17px;
+    height: 17px;
+}
+
+.two-container {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.two-container > .left-container {
+    width: 200px;
+    flex: 0 0 200px; /* 나중에 설명. 이걸 추가하지 않으면, flex 가변이 지속적으로 적용됨. 이후 width를 삭제해도 됨 */
+}
+
+.two-container > .right-container {
+    flex-grow: 1;
+}
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pagination-container > .pagination {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+.pagination-container > .pagination > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    font-size: 14px;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.pagination-container > .pagination > li > a:hover {
+    background-color: var(--dark-color);
+}
+

@@ -1,0 +1,108 @@
+.sign-wrapper {
+    min-height: calc(100dvh - 200px); /* logo까지 넣고 진행. dvh에 대해 설명 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0; /* 전부 다 진행한 후 추가. 위 아래가 딱 붙으면 이상하니까. */
+}
+
+.sign-logo {
+    font-size: 2rem;
+    font-family: 'RiaSans-ExtraBold', serif;
+    margin-bottom: 20px;
+
+    /* 텍스트에 그라데이션 넣기 */
+    background: linear-gradient(to right, #FFA600, #FFCD62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+}
+
+.sign-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sign-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.sign-input-container label {
+    font-size: 0.9rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sign-input-container input,
+.sign-input-container select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.sign-container button,
+.sign-input-container button {
+    width: 100%;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #FFA600;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-link-up {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.sign-container select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+/* select와 input의 스타일이 완전히 동일함. 하면 합칠 수 있겠지 */
+
+.sign-address-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.sign-postDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.sign-postDiv > button {
+    width: 150px;
+}

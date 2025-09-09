@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reset-css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons-react/dist/index.umd.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+    <link rel="stylesheet" href="../../styles/common.css"/>
+    <link rel="stylesheet" href="../../styles/category.css"/>
+    <link rel="stylesheet" href="../../styles/my.css"/>
+    <link rel="stylesheet" href="../../styles/sign.css"/>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <a href="../../index.html" target="_self" class="header-logo">MOIDA</a>
+        <div class="header-buttonBox">
+            <a href="sign/in/index.html" class="header-button">
+                <i class="ti ti-users"></i>
+                <span>마이</span>
+            </a>
+            <div class="header-button">
+                <i class="ti ti-menu-2"></i>
+                <span>메뉴</span>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- category 화면과 동일한 구성임. category 파일에서 복사 -->
+<main class="main-container">
+    <div class="two-container">
+        <div class="left-container">
+            <div class="category-list">
+                <a href="../info/index.html">회원정보수정</a>
+                <a href="index.html">비밀번호 변경</a>
+                <a href="index.html">로그아웃</a>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="subTitle">회원정보수정</div>
+            <form class="sign-input-container">
+                <label>현재 비밀번호 *
+                    <input type="password" name="prevPassword" placeholder="현재 비밀번호를 입력해주세요" readOnly required/>
+                </label>
+                <label>변경할 비밀번호 *
+                    <input type="password" name="nextPassword" placeholder="변경할 비밀번호를 입력해주세요" readonly required/>
+                </label>
+                <label>변경할 비밀번호 확인 *
+                    <input type="password" name="confirmPassword" placeholder="변경할 비밀번호를 다시 한 번 입력해주세요"required/>
+                </label>
+                <button type="submit">비밀번호 변경</button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">MOIDA</div>
+        <div class="footer-copyright">© 2025 Moineun Saram. All rights reserved.</div>
+    </div>
+</footer>
+</body>
+</html>
