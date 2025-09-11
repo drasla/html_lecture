@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+     차후 SpringBoot에 대해서 배울 때 백엔드에서 이 데이터를 받아서 처리해야되지만
+     아직 배우지 않았으므로, 데이터를 보내는 것을 외부 서비스를 통해서 확인할 것임
+
+     이용 할 사이트 : https://postman-echo.com
+     우리가 전송한 데이터를 받았는지, 어떤 내용을 받았는지 확인 가능함
+-->
+<h1>GET 방식</h1>
+<form action="https://postman-echo.com/get" method="get">
+    <label>이름: <input type="text" name="name"/></label><br/>
+    <label>이메일: <input type="email" name="email"/></label><br/>
+    <label>비밀번호: <input type="password" name="pwd"/></label>
+    <input type="submit" value="GET 전송"/>
+</form>
+<!--
+     GET 방식은 주소줄에 데이터를 담아서 전송하는 방식
+     따라서 URL의 길이 제한에 맞추어 전송할 수 있는 데이터량이 한정되어 있음
+     또한, URL은 외부에서 조회가 가능하므로 중요 정보를 담을 수 없음!
+-->
+
+
+<h1>POST 방식</h1>
+<form action="https://postman-echo.com/post" method="post">
+    <label>이름: <input type="text" name="name"/></label><br>
+    <label>이메일: <input type="email" name="email"/></label><br>
+    <label>비밀번호: <input type="password" name="pwd"/></label>
+    <button type="submit">POST 전송</button>
+</form>
+
+<!--
+      응답에 form 객체 안에 데이터가 들어가 있지만
+      이건 postman 쪽에서 form액션으로 데이터가 전송되었음을 보여주기 위함일 뿐
+      실제로 전달되는 데이터는 body라는 객체 안에 데이터가 전송됨
+-->
+</body>
+</html>

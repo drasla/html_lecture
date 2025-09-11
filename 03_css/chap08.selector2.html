@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 후손 선택자 */
+        div p {
+            color: red;
+        }
+
+        /* 자식 선택자 */
+        div > span {
+            color: blue;
+        }
+
+        div > .abc {
+            color: skyblue;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        button:active {
+            background-color: skyblue;
+        }
+
+        /* 만약 hover와 active의 순서를 바꾸면 어떻게 될까? */
+        /* cascading이 중요함 */
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* 브라우저 기본으로 :focus outline 속성이 적용되어 있음. 그걸 빼야 우리가 원하는 대로 볼 수 있음 */
+        input:focus {
+            border: 1px solid #888;
+            outline: none;
+        }
+
+        /* checked 를 확인하기 위해서는 브라우저에서 지정한 기본 스타일을 지워야 함 */
+        input[type="checkbox"] {
+            appearance: none; /* 기본 스타일을 제외하겠음 */
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input:checked {
+            background-color: #98db34;
+        }
+
+        input:disabled {
+            background-color: #222;
+        }
+
+
+        /* 구조 선택자 */
+        table {
+            border-collapse: collapse; /* table은 이중 선으로 되어 있는데 그걸 합침 */
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        /* 여기까지 하고 테이블 모습을 보자 */
+
+        th:first-child {
+            background-color: #f39c12;
+        }
+
+        th:last-child {
+            background-color: #2ecc71;
+        }
+
+        tbody > tr:nth-child(even) { /* 짝수 */
+            background-color: #ecf0f1;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+<!-- 후손 선택자 -->
+<div>
+    <p>이것은 직계 자식입니다.</p>
+    <div>
+        <p>이것은 후손입니다.</p>
+    </div>
+    <div>
+        <div>
+            <div>
+                <p>이것은 후손입니다.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 자식 선택자 -->
+<div>
+    <span>이것은 직계 자식입니다.</span>
+    <nav>
+        <span>이것은 후손입니다.</span>
+        <!-- 이후, 클래스 선택자를 통한 자식 선택자 -->
+        <div>
+            <span>이것은 두번째 div의 직계 자식입니다.</span>
+            <span class="abc">이것은 div의 직계 자식이면서 class=abc를 갖습니다.</span>
+            <!-- 캐스캐이딩 되었음 -->
+        </div>
+    </nav>
+</div>
+
+
+<!-- 반응 선택자 -->
+<!-- :active - 클릭 중일 때 적용 -->
+<!-- :hover - 마우스를 올렸을 때 적용 -->
+<button>이것은 버튼입니다.</button>
+
+<!-- 상태 선택자 -->
+<!-- :focus - 커서가 올라갔을 때 적용 -->
+<input type="text"/>
+
+<!-- :checked - 체크박스나 라디오 버튼에서 체크가 되었을 때 적용 -->
+<input type="checkbox"/>
+<input type="radio"/>
+<!-- radio 버튼은 브라우저 기본 속성이 적용되어 있어서 변경이 안됨 -->
+
+<!-- :disabled - 사용불가된 인풋박스의 스타일 적용 -->
+<input type="text" name="username" value="drasla" disabled/>
+
+
+<!-- 구조선택자. table에서 특히 많이 사용 -->
+<table>
+    <thead>
+    <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>직업</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>홍길동</td>
+        <td>30</td>
+        <td>개발자</td>
+    </tr>
+    <tr>
+        <td>이순신</td>
+        <td>45</td>
+        <td>장군</td>
+    </tr>
+    <tr>
+        <td>세종대왕</td>
+        <td>60</td>
+        <td>왕</td>
+    </tr>
+    <tr>
+        <td>율곡이이</td>
+        <td>50</td>
+        <td>대신</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3">특별공지</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>
